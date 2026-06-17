@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Cozy Chapters | Cute Bookmarks Made With Love</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container nav-container">
+        <a href="#" class="logo">
+          <i class="fa-solid fa-book-open text-pink"></i>
+          Cozy Chapters
+        </a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <div class="cart-icon" id="cartBtn">
+          <i class="fa-solid fa-shopping-basket"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <span class="hero-tagline">Cute Bookmarks</span>
+        <h1>Made With Love</h1>
+        <p>Save your spot with a smile. Discover our collection of hand-drawn, pastel-perfect bookmarks designed to make your reading time even cozier.</p>
+        <div style="display: flex; gap: 1rem;">
+          <a href="#shop" class="btn btn-primary">Shop Collection</a>
+          <a href="#about" class="btn btn-secondary">Our Story</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/hero_illustration_1781658402249.png" alt="Cozy reading setup with a frog" class="hero-img" />
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <div class="container">
+      <div class="highlights">
+        <div class="highlight-item">
+          <i class="fa-solid fa-leaf highlight-icon"></i>
+          <span class="highlight-text">Soft Pages</span>
+        </div>
+        <div class="highlight-item">
+          <i class="fa-solid fa-mug-hot highlight-icon" style="color: var(--accent-pink);"></i>
+          <span class="highlight-text">Cozy Days</span>
+        </div>
+        <div class="highlight-item">
+          <i class="fa-solid fa-star highlight-icon" style="color: var(--accent-yellow);"></i>
+          <span class="highlight-text">Sweet Stories</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Products -->
+    <section class="featured container" id="shop">
+      <div class="text-center">
+        <h2 class="section-title">New Arrivals</h2>
+      </div>
+      
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="/frog_bookmark_1781658411648.png" alt="Story Time Frog Bookmark" class="product-image" />
+          </div>
+          <h3 class="product-title">Story Time Frog</h3>
+          <div class="product-price">$6.00</div>
+          <button class="add-to-cart" data-id="1">Add to Basket</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="/strawberry_bookmark_1781658420283.png" alt="Stay Sweet Strawberry Bookmark" class="product-image" />
+          </div>
+          <h3 class="product-title">Stay Sweet Strawberry</h3>
+          <div class="product-price">$6.00</div>
+          <button class="add-to-cart" data-id="2">Add to Basket</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="/flower_bookmark_1781658429513.png" alt="Golden Daisy Bookmark" class="product-image" />
+          </div>
+          <h3 class="product-title">Golden Daisy</h3>
+          <div class="product-price">$6.00</div>
+          <button class="add-to-cart" data-id="3">Add to Basket</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-content">
+          <h2>Our Cozy Story</h2>
+          <p>It all started with a love for warm tea, good books, and cute little frogs. Cozy Chapters was born out of a desire to create tiny pieces of art that can accompany you on your reading journeys.</p>
+          <p>Every bookmark is designed with a soft, pastel aesthetic in mind, hoping to bring a touch of gentleness and joy to your everyday life.</p>
+          <a href="#" class="btn btn-primary" style="background-color: white; color: var(--accent-green);">Read More</a>
+        </div>
+        <div class="about-decorative">
+          <div class="about-circle">
+            <h3>Read &<br>Dream</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h2>Cozy Chapters</h2>
+            <p style="opacity: 0.8; max-width: 300px;">Cute bookmarks made with love. Your perfect companion for soft pages and sweet stories.</p>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Shop</h4>
+              <ul>
+                <li><a href="#">All Bookmarks</a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">New Arrivals</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Info</h4>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Say Hello</h4>
+              <ul style="display: flex; gap: 1rem; font-size: 1.5rem;">
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2026 Cozy Chapters. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
