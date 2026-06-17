@@ -44,7 +44,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         behavior: 'smooth'
       });
     }
+
+    // Close mobile menu if open
+    const navLinks = document.getElementById('navLinks');
+    if (navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+    }
   });
 });
+
+// Mobile Menu Toggle
+const mobileToggle = document.getElementById('mobileToggle');
+const navLinks = document.getElementById('navLinks');
+
+if (mobileToggle) {
+  mobileToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+}
 
 console.log('Cozy Chapters loaded successfully! ✿');
