@@ -225,6 +225,11 @@ header {
   max-width: 480px;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
 .hero-image {
   flex: 1;
   position: relative;
@@ -539,6 +544,10 @@ footer {
     flex-direction: column;
     text-align: center;
     padding: 3rem 1rem;
+  }
+  
+  .hero-tagline, .hero-buttons {
+    justify-content: center;
   }
   
   .hero p {
