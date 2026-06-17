@@ -540,10 +540,15 @@ footer {
     display: flex;
   }
 
+  .hero {
+    padding: 1rem 0 2rem;
+  }
+
   .hero-inner {
     flex-direction: column;
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 1rem;
+    gap: 2rem;
   }
   
   .hero-tagline {
