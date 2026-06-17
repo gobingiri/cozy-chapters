@@ -22,6 +22,18 @@
   --transition-speed: 0.3s;
 }
 
+[data-theme="dark"] {
+  --bg-primary: #1A1512;
+  --bg-secondary: #2C211A;
+  --text-primary: #fcf8f4;
+  --text-secondary: #D4BBA5;
+  --accent-pink: #E6A19F;
+  --accent-green: #87a372;
+  --accent-yellow: #f0c37c;
+  --accent-red: #e15a5a;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +46,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -104,6 +117,11 @@ header {
   top: 0;
   z-index: 100;
   border-bottom: 2px dashed rgba(230, 161, 159, 0.3);
+  transition: background-color var(--transition-speed) ease;
+}
+
+[data-theme="dark"] header {
+  background-color: rgba(42, 29, 22, 0.9);
 }
 
 .nav-container {
@@ -143,6 +161,26 @@ header {
   cursor: pointer;
 }
 
+.theme-toggle {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-speed) ease, color var(--transition-speed) ease, background var(--transition-speed) ease;
+  width: 38px;
+  height: 38px;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  color: var(--accent-pink);
+}
+
 .cart-icon {
   position: relative;
   font-size: 1.2rem;
@@ -153,7 +191,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease, background var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 .cart-icon:hover {
@@ -182,6 +220,12 @@ header {
   padding: 4rem 0 6rem;
   background: radial-gradient(circle at top left, rgba(230, 161, 159, 0.2), transparent 40%),
               radial-gradient(circle at bottom right, rgba(135, 163, 114, 0.15), transparent 40%);
+  transition: background var(--transition-speed) ease;
+}
+
+[data-theme="dark"] .hero {
+  background: radial-gradient(circle at top left, rgba(230, 161, 159, 0.05), transparent 40%),
+              radial-gradient(circle at bottom right, rgba(135, 163, 114, 0.05), transparent 40%);
 }
 
 .hero-inner {

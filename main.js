@@ -63,4 +63,41 @@ if (mobileToggle) {
   });
 }
 
+// Dark Mode Toggle
+const themeToggle = document.getElementById('themeToggle');
+const heroImg = document.querySelector('.hero-img');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme === 'dark') {
+    themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    if(heroImg) heroImg.src = './public/hero_illustration_dark.png';
+  }
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    let theme = document.documentElement.getAttribute('data-theme');
+    
+    // Add flip animation class logic
+    themeToggle.style.transform = 'scale(0.8) rotate(180deg)';
+    
+    setTimeout(() => {
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        if(heroImg) heroImg.src = './public/hero_illustration_1781658402249.png';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        if(heroImg) heroImg.src = './public/hero_illustration_dark.png';
+      }
+      themeToggle.style.transform = 'scale(1) rotate(0deg)';
+    }, 150);
+  });
+}
+
 console.log('Cozy Chapters loaded successfully! ✿');
