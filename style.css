@@ -180,14 +180,15 @@ header {
 /* Hero Section */
 .hero {
   padding: 4rem 0 6rem;
+  background: radial-gradient(circle at top left, rgba(230, 161, 159, 0.2), transparent 40%),
+              radial-gradient(circle at bottom right, rgba(135, 163, 114, 0.15), transparent 40%);
+}
+
+.hero-inner {
   display: flex;
   align-items: center;
   gap: 4rem;
   min-height: calc(100vh - 100px);
-  background: radial-gradient(circle at top left, rgba(230, 161, 159, 0.2), transparent 40%),
-              radial-gradient(circle at bottom right, rgba(135, 163, 114, 0.15), transparent 40%);
-  border-radius: var(--border-radius);
-  margin-top: 1rem;
 }
 
 .hero-content {
@@ -534,7 +535,7 @@ footer {
     display: flex;
   }
 
-  .hero {
+  .hero-inner {
     flex-direction: column;
     text-align: center;
     padding: 3rem 1rem;
