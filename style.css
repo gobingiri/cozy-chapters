@@ -546,8 +546,22 @@ footer {
     padding: 3rem 1rem;
   }
   
-  .hero-tagline, .hero-buttons {
+  .hero-tagline {
     justify-content: center;
+    width: 100%;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 0.8rem;
+  }
+  
+  .hero-buttons .btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    white-space: nowrap;
   }
   
   .hero p {
